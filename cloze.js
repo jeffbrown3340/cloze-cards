@@ -1,18 +1,24 @@
 // Create a ClozeCard constructor. 
 // It should accept text and cloze arguments.
 var ClozeCard = function(fullText, cloze) {
+	//errMsg starts out empty
 	var errMsg = "";
+	// if either argument is empty set string to something
 	for (var i = 0; i < 2; i++){
 		errMsg = isUndefined(arguments[i]);
 	} 
+	// if there's an error now it must be parameters
 	if (errMsg === "true"){
 		errMsg = "ClozeCard requires two parameters.";
 	} else {
+		//otherwise test for cloze in fullText
 		errMsg = fullText.indexOf(cloze);
 	}
 	if (errMsg === "-1"){
+		//this would be non-containing
 		errMsg = "ERROR:" + fullText + " does not contain " + cloze;
 	}
+	// if it's still empty we're good to go but if not ...
 	if (errMsg.length > 0){
 		console.log("Error - " + errMsg);
 		return;
@@ -21,6 +27,7 @@ var ClozeCard = function(fullText, cloze) {
     this.cloze = cloze;
 };
 
+// check the strings
 function isUndefined(str){
 	if (typeof str === "undefined") return true;
 }
