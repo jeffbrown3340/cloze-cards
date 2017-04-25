@@ -10,15 +10,17 @@ var obviousQuestion = new BasicCard(
     '\nthey are "entombed"'
     );
 
-console.log(obviousQuestion.front); 
+console.log("FRONT OF BASIC CARD:\n" + obviousQuestion.front); 
 console.log("============================="); 
-console.log(obviousQuestion.back); 
-
+console.log("BACK OF BASIC CARD:\n" + obviousQuestion.back); 
+console.log("============================="); 
 var obviousQuestionCloze = new ClozeCard(
     "Mr and Mrs Grant are entombed in Grant's Tomb.", "Mr and Mrs Grant");
-console.log(obviousQuestionCloze.cloze); 
-console.log(obviousQuestionCloze.partial);
-console.log(obviousQuestionCloze.fullText);
+console.log("CLOZE SEGMENT:\n" + obviousQuestionCloze.cloze);
+console.log("============================="); 
+console.log("PARTIAL:\n" + obviousQuestionCloze.partial());
+console.log("============================="); 
+console.log("FULL TEXT:\n" + obviousQuestionCloze.fullText);
 // Should throw or log an error because "oops" doesn't appear in "This doesn't work"
-
+console.log("============================="); 
 var brokenCloze = new ClozeCard("This doesn't work", "oops");

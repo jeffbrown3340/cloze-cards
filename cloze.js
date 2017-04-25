@@ -1,13 +1,6 @@
 // Create a ClozeCard constructor. 
 // It should accept text and cloze arguments.
 var ClozeCard = function(fullText, cloze) {
-	// errMsg will trigger early return with error logged
-	console.log("fullText=", fullText);
-	console.log("cloze=", cloze);
-	//============================
-		var str0 = "abc";
-		console.log(str0.indexOf("z"));
-	//============================
 	var errMsg = "";
 	for (var i = 0; i < 2; i++){
 		errMsg = isUndefined(arguments[i]);
