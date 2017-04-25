@@ -1,2 +1,0 @@
-# cloze-cards
-Flashcard Generator
