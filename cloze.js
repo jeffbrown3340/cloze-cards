@@ -14,7 +14,7 @@ var ClozeCard = function(fullText, cloze) {
 		//otherwise test for cloze in fullText
 		errMsg = fullText.indexOf(cloze);
 	}
-	if (errMsg === "-1"){
+	if (errMsg === -1){
 		//this would be non-containing
 		errMsg = "ERROR:" + fullText + " does not contain " + cloze;
 	}
